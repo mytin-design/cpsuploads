@@ -1,0 +1,119 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPS UPLOADS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="uploadRoot" class="body_root" >
+        <div class="header-mark">
+            <h1 class="header_marker">CPS UPLOADS</h1>
+        </div>
+        <div class="main_root">
+            <!--Up_rows with at least two subjects inline-->
+            <div class="up_row up_row_one">
+                <form method="post" action="gradeone.php" class="upload_box subject_math">
+                    <label for="grd1" class="uplabelbtn">Upload Grade 1 File</label>
+                    <input type="file" id="grd1" class="upload_input"  name="gradeoneup" onchange="displayFileName('grd1')" required>
+                    <button type="submit" class="uploadcpsbtns">Save</button>
+                </form>
+                <form method="post" action="gradethree.php" class="upload_box subject_eng">
+                    <label for="grd2" class="uplabelbtn">Upload Grade 2 File</label>
+                    <input type="file" id="grd2" class="upload_input"  name="gradetwoup" onchange="displayFileName('grd2')" required>
+                    <button type="submit" class="uploadcpsbtns">Save</button>
+                </form>
+            </div>
+
+            <!--Basically, the up_rows and subject boxes have a similar structure, so copy,paste and change text-->
+
+            <div class="up_row up_row_two">
+                <form method="post" action="gradethree.php" class="upload_box subject_kisw">
+                    <label for="grd3" class="uplabelbtn">Uplaod Grade 3 File</label>
+                    <input type="file" id="grd3" class="upload_input"  name="gradethreeup" onchange="displayFileName('grd3')" required>
+                    <button type="submit" class="uploadcpsbtns">Save</button>
+                </form>
+                <form method="post" action="gradefour.php" class="upload_box subject_scie">
+                    <label for="grd4" class="uplabelbtn">Upload Grade 4 File</label>
+                    <input type="file" id="grd4" class="upload_input"  name="gradefourup" onchange="displayFileName('grd4')" required>
+                    <button type="submit" class="uploadcpsbtns">Save</button>
+                </form>
+            </div>
+
+            <!--Up_row 3-->
+            
+            <div class="up_row up_row_three">
+                <form method="post" action="gradefive.php" class="upload_box subject_comp">
+                    <label for="grd5" class="uplabelbtn">Upload Grade 5 File</label>
+                    <input type="file" id="grd5" class="upload_input"  name="gradefiveup" onchange="displayFileName('grd5')" required>
+                    <button type="submit" class="uploadcpsbtns">Save</button>
+
+                </form>
+                <form method="post" action="gradesix.php" class="upload_box subject_insha">
+                    <label for="grd6" class="uplabelbtn">Upload Grade 6 File</label>
+                    <input type="file" id="grd6" class="upload_input"  name="gradesixup" onchange="displayFileName('grd6')" required>
+                    <button type="submit" class="uploadcpsbtns">Save</button>
+
+                </form>
+            </div>
+
+            <!--Up_row 4-->
+            
+            <div class="up_row up_row_three">
+                <form method="post" action="gradeseven.php" class="upload_box subject_comp">
+                    <label for="grd7" class="uplabelbtn">Upload Grade 7 File</label>
+                    <input type="file" id="grd7" class="upload_input"  name="gradesevenup" onchange="displayFileName('grd7')" required>
+                    <button type="submit" class="uploadcpsbtns">Save</button>
+
+                </form>
+                <form method="post" action="gradeeight.php" class="upload_box subject_insha">
+                    <label for="grd8" class="uplabelbtn">Upload Grade 8 File</label>
+                    <input type="file" id="grd8" class="upload_input"  name="gradeeightup" onchange="displayFileName('grd8')" required>
+                    <button type="submit" class="uploadcpsbtns">Save</button>
+
+                </form>
+            </div>
+
+            <!--Up_row 5-->
+            
+            <div class="up_row up_row_three">
+                <form method="post" action="gradenine.php" class="upload_box subject_comp">
+                    <label for="grd9" class="uplabelbtn">Upload Grade 9 File</label>
+                    <input type="file" id="grd9" class="upload_input"  name="gradenineup" onchange="displayFileName('grd9')" required>
+                    <button type="submit" class="uploadcpsbtns">Save</button>
+
+                </form>
+                <form method="post" action="gradeten.php" class="upload_box subject_insha">
+                    <label for="grd10" class="uplabelbtn">Upload Grade 10 File</label>
+                    <input type="file" id="grd10" class="upload_input"  name="gradetenup" onchange="displayFileName('grd10')" required>
+                    <button type="submit" class="uploadcpsbtns">Save</button>
+
+                </form>
+            </div>
+        </div>
+       <div class="notifs_up">
+        <p class="notif" id="upNotif1"></p>
+        <p class="notif" id="upNotif2"></p>
+        <p class="notif" id="upNotif3"></p>
+        <p class="notif" id="upNotif4"></p>
+        <p class="notif" id="upNotif5"></p>
+        <p class="notif" id="upNotif6"></p>
+        <p class="notif" id="upNotif7"></p>
+        <p class="notif" id="upNotif8"></p>
+        <p class="notif" id="upNotif9"></p>
+        <p class="notif" id="upNotif10"></p>
+       </div>
+        <hr color="lightgray">
+        <div class="stdActbtns">
+            <div class="stdActbtnsIn">
+                <button id="delStudent" class="stdinfobtn" onclick="clearAllFiles()" >Clear Files</button>
+                <button id="saveStudent" class="stdinfobtn" >SaveAll</button>
+                <button id="closeRegbox" class="stdinfobtn" onclick="closeupLoad()">Close</button>
+
+            </div>                
+        </div>
+       
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
